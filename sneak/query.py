@@ -4,8 +4,11 @@ class ListQueryResult(object):
         select_related = True
         where = False
 
-    def __init__(self, value):
-        self.value = value
+    def __init__(self, value=None):
+        if value is None:
+            self.value = []
+        else:
+            self.value = value
 
     def count(self):
         return len(self)

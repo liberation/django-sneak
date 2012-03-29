@@ -1,4 +1,5 @@
 class ListQueryResult(object):
+    """This is duck class behaving like a Django QuerySet"""
 
     class query:
         select_related = True

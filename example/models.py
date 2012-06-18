@@ -8,5 +8,5 @@ class FileSystemElement(SneakModel):
         self._path = path
 
     def path(self):
-        return self._path
-
+        return '<a href="#">%s</a>' % self._path
+    path.allow_tags = True

@@ -9,5 +9,5 @@ from models import FileSystemElement
 class FileSystemAdmin(SneakAdmin):
     QuerySet = FileSystemQuerySet
 
-    list_display = ('id', 'foo', )
+    list_display = ('path', )
 admin.site.register([FileSystemElement], FileSystemAdmin)

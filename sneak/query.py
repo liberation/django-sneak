@@ -1,9 +1,19 @@
-class ListQueryResult(object):
+class ListQuerySet(object):
     """This is duck class behaving like a Django QuerySet"""
+
+    def filter(self, *args, **kwargs):
+        return self
+
+    def order_by(self, *args, **kwargs):
+        return self
+
+    def delete(self):
+        return len(self.value)
 
     class query:
         select_related = True
         where = False
+        order_by = []
 
     def __init__(self, value=None):
         if value is None:

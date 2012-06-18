@@ -5,8 +5,9 @@ from forms import DummyForm
 
 class SneakAdmin(admin.ModelAdmin):
     """Inherits this class and define ``QuerySet``. ``self.QuerySet.filter``
-    should return a class inheriting ``sneak.query.ListQueryResult``"""
+    should Result``"""
     form = DummyForm
+    actions = None
 
     def queryset(self, request):
         return self.QuerySet()

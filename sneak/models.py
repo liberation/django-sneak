@@ -1,6 +1,8 @@
 from django.db import models
+from dardive.models import CommandConfig
 
-class SneakModel(models.Model):
 
-    def __init__(self):
-        self.id = None
+class SneakModel(CommandConfig):
+
+    class Meta:
+        abstract = True

@@ -1,5 +1,4 @@
 from django.db import models
-from dardive.models import CommandConfig
 
 
 class SneakModel(CommandConfig):
